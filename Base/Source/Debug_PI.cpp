@@ -23,18 +23,37 @@ void Debug_PI::Init()
 	{
 		cout << "File Error" << endl;
 	}
+	Pos = Vector3();
 }
 
 void Debug_PI::Update(double dt)
 {
+<<<<<<< HEAD
 	if (Input_PI::pointer()->HaveBeenPressed[Input_PI::All_Control])
 	{
+=======
+	if (Application::IsKeyPressed('W'))
+	{
+		Pos.x += 10 * dt;
+	}
+	if (Application::IsKeyPressed('S'))
+	{
+		Pos.x -= 10 * dt;
+	}
+	if (Application::IsKeyPressed('D'))
+	{
+		Pos.y += 10 * dt;
+	}
+	if (Application::IsKeyPressed('A'))
+	{
+		Pos.y -= 10 * dt;
+>>>>>>> b615fca2f457ae2e8f7fb305fb2e86b7b3168285
 	}
 }
 
 void Debug_PI::Render()
 {
-	Floor1.Render(Vector3());
+	Floor1.Render(Pos);
 }
 
 void Debug_PI::Exit()
