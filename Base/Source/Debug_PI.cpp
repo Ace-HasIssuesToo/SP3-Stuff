@@ -1,5 +1,6 @@
 #include "Debug_PI.h"
 #include "Texture_PI.h"
+#include "Input_PI.h"
 
 Debug_PI* Debug_PI::c_pointer = new Debug_PI();
 
@@ -26,6 +27,9 @@ void Debug_PI::Init()
 
 void Debug_PI::Update(double dt)
 {
+	if (Input_PI::pointer()->HaveBeenPressed[Input_PI::All_Control])
+	{
+	}
 }
 
 void Debug_PI::Render()
